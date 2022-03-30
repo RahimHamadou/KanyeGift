@@ -33,6 +33,9 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	backdrop-filter: blur(5px);
+	opacity: 0;
+	transform: translateX(-30px);
+	animation: show 0.8s 1.8s ease-out forwards;
 }
 .main-center {
 	display: flex;
@@ -46,6 +49,9 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	margin-top: 30px;
+	opacity: 0;
+	transform: translateY(-50px);
+	animation: show 0.4s 1.6s ease-out forwards;
 }
 
 .main-bottom {
@@ -54,8 +60,16 @@ h1 {
 	justify-content: center;
 }
 
+.gift {
+	opacity: 0;
+	transform: translateX(-60px);
+	animation: show 0.8s 0.7s ease-out forwards;
+}
 .refresh {
 	padding: 15px;
+	opacity: 0;
+	transform: translateX(-30px);
+	animation: show 0.8s 1.4s ease-out forwards;
 }
 .hvr-round-corners {
 	display: inline-block;
@@ -215,5 +229,12 @@ h1 {
 	}
 	100% {
 		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes show {
+	100% {
+		opacity: 1;
+		transform: none;
 	}
 }
